@@ -1,5 +1,9 @@
-FROM openjdk:8u131-jre-alpine
-ENV HW_HOME=/opt/hello-world
-ADD HelloWorld.class $HW_HOME/
-WORKDIR $HW_HOME
-ENTRYPOINT ["java", "HelloWorld"]
+FROM ubuntu:14.04
+RUN apt-get update
+RUN apt-get install -y nginx
+ADD nginx.conf /etc/nginx/nginx.conf
+
+ADD ./www-data /www-data
+
+EXPOSE 80
+CMD ["nginx"]
