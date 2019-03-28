@@ -4,9 +4,21 @@ services:
   postgres:
     image: postgres:10
     ports: 5432:5432
-  app:
-    build: app/
+  frontend:
+    build: frontend/
     ports: 80:80
-  app2:
-    build: app2/
+  backend:
+    build: backend/
     ports: 80:80
+  supporter:
+    build: supporter/
+    ports: 80:80
+  app3:
+    build: app3/
+    ports: 80:80
+  app4:
+    build: app4/
+    ports: 80:80   
+  app5:
+    build: app5/
+    ports: 80:80                
