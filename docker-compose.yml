@@ -3,3 +3,22 @@ version: '3.0'
 services:
   postgres:
     image: postgres:10
+    ports: 5432:5432
+  frontend:
+    build: frontend/
+    ports: 80:80
+  backend:
+    build: backend/
+    ports: 80:80
+  supporter:
+    build: supporter/
+    ports: 80:80
+  app3:
+    build: app3/
+    ports: 80:80
+  app4:
+    build: app4/
+    ports: 80:80   
+  app5:
+    build: app5/
+    ports: 80:80                
